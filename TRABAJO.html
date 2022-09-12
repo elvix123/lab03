@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trabajo</title>
+    <script>
+        function muestraOpcion(){
+            var opciones = document.getElementsByName("eleccion");
+            var num1 = parseInt(document.getElementById("num1").value);
+            if(opciones[0].checked){
+                    alert(num1*3 + " dolares");
+            }else{
+                    alert(num1*5 + " euros");
+            }
+        }   
+       
+            
+    </script>
+</head>
+<body>
+    <center>
+    <h1>Casa de cambio</h1>
+    </center>
+    <center>    
+    <b style="position:relative;right:100px;bottom: 0px;">Seleccione moneda a enviar:</b></br>
+    <div style="position:relative;right:145px;;">
+    <input type="radio" name="eleccion" value="dolar" >Dólar 
+    <input type="radio" name="eleccion" value="euro" >Euro<br>
+    </div>  
+    </center>
+    <center>
+    <b style="position:relative;right:145px;bottom: 0px;" >Ingrese monto:</b></center>
+        <form>
+            <center >
+            <h></h>
+            <input type="text" id="num1" style="position:relative; right: 50px;top: 10px;" >
+            </center>  
+            
+        </form>
+    <center >  
+    <button type="button" style="position: relative; top: 25px; right: 45px" onclick="muestraOpcion()">cotizar</button>
+    </center>
+</body>
+</html>
